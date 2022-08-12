@@ -16,6 +16,7 @@ const Container=styled.div`
     background-color:black;
 `
 ;
+const API = process.env.API_ENDPOINT 
 const Title = styled.p`
 // color: #AFAFAF;
 // color:#7CB9E8;
@@ -50,7 +51,7 @@ function Products() {
   useEffect(()=>{
     const getProducts = async()=>{
       try{
-        const res = await axios.get( `http://localhost:5000/products`)
+        const res = await axios.get( `${API}/products`)
         
         setProducts(res.data);
         console.log(res);
