@@ -5,6 +5,7 @@ import { mobile } from '../responsive'
 import { mobile2 } from '../responsive'
 import { mobile3 } from '../responsive'
 import { mobile8 } from '../responsive'
+import { mobile10 } from '../responsive'
 import Marquee from "react-fast-marquee";
 import { keyframes } from 'styled-components'
 import Lottie from 'react-lottie';
@@ -31,7 +32,7 @@ align-items:center;
 overflow:hidden;
 
 
-${mobile({marginTop:"40px"})}
+${mobile({marginTop:"40px",flexDirection:"column"})}
 ${mobile3({marginTop:"70px"})}
 
 `
@@ -70,24 +71,23 @@ const defaultOptions = {
 };
 
 const Image = styled.img`
-// height:50vh;
-// padding:2vh;
+
 display:flex;
 
 margin-top:10%;
 margin-left:-20%;
 
-// width:30px;
 height:60vh;
-// background:cyan;
-// border-radius:50%;
-// position:absolute;
-// left:80%;
+
 overflow:hidden;
-// margin:auto;
+
 animation: ${rotate} 6s linear infinite;
-${mobile({height:"25vh",padding:"5vh"})}
-${mobile2({height:"25vh"})}
+${mobile({height:"45vh",padding:"5vh",marginLeft:"auto",marginRight:"auto",display:"flex"})}
+
+${mobile2({height:"35vh"})}
+
+
+
 
 
 `
@@ -100,20 +100,20 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-
+${mobile({marginLeft:"auto",marginRight:"auto",display:"flex"})}
 `
 const Title = styled.div`
-// color: #64ffda;
+
 background: linear-gradient(186deg, rgba(144,155,132,1) 9%, rgba(138,149,123,1) 14%, rgba(106,115,77,1) 40%, rgba(75,83,32,1) 65%);
 ;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-// color:#7CB9E8;
+
 font-size:60px;
 margin-top:4%;
 width:70%;
-line-height: 130%;
-// font-family:'syne';
+line-height: 150%;
+
 font-family: 'Anton', sans-serif;
 
 letter-spacing:1px;
@@ -132,7 +132,7 @@ color: white;
 font-family: 'inter';
 font-style: normal;
 font-weight: 400;
-font-size: 18px;
+font-size: 20px;
 margin-top:3%;
 margin-left:-10%;
 text-align:left;
@@ -150,12 +150,18 @@ const Rectangle = styled.div`
   // right:0;
   display:flex;
   position:absolute;
+
   box-shadow: 0 0 0 25px #1e1e1e;
   animation: ${rotate} 10s linear infinite;
-
+  ${mobile2({height:"22vh",width:"50%",boxShadow: "0 0 0 20px #1e1e1e"})}
+  ${mobile({boxShadow: "0 0 0 40px #1e1e1e",height:"20vh",width:"42%"})}
+  ${mobile8({boxShadow: "0 0 0 25px #1e1e1e",height:"20vh",width:"44%"})}
 `
 const ParentContainer = styled.div`
-
+${mobile({display:"flex",alignItems:"center",justifyContent:"center"})}
+${mobile2({marginTop:"-10%"})}
+${mobile2({display:"flex",alignItems:"center",justifyContent:"center"})}
+${mobile8({display:"flex",alignItems:"center",justifyContent:"center"})}
 `
 
 const Beginning = () => {
