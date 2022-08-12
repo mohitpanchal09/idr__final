@@ -26,7 +26,7 @@ app.use("/api/images",imageRoute);
 // Deployment
 __dirname = path.resolve(); 
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 // HEROKU
 if(process.env.NODE_ENV == 'production'){
     app.use(express.static(path.join(__dirname,"/idr_website/build")));
@@ -38,6 +38,6 @@ if(process.env.NODE_ENV == 'production'){
 
 
 
-app.listen(process.env.PORT || 5000 ,()=>{
+app.listen(port ,()=>{
     console.log("backend server is running")
 })
