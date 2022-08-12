@@ -42,15 +42,16 @@ padding:50px 0px;
 
 
 `
-
+const PORT = process.env.PORT || 5000
 function Products() {
+
   const [products,setProducts] = useState([]);
   
 
   useEffect(()=>{
     const getProducts = async()=>{
       try{
-        const res = await axios.get(`http://localhost:5000/products`)
+        const res = await axios.get(`${PORT}/products`)
         
         setProducts(res.data);
         console.log(res);
