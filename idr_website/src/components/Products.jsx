@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { popularDrones } from '../data';
-// import {dotenv} from 'dotenv'
-// dotenv.config();
 import Product from './Product';
 import { mobile8 } from '../responsive';
 import { mobile4 } from '../responsive';
@@ -44,16 +42,15 @@ padding:50px 0px;
 
 
 `
-const PORT = process.env.PORT || 5000
-function Products() {
 
+function Products() {
   const [products,setProducts] = useState([]);
   
 
   useEffect(()=>{
     const getProducts = async()=>{
       try{
-        const res = await axios.get(`${PORT}/products`)
+        const res = await axios.get( `http://localhost:5000/api/products`)
         
         setProducts(res.data);
         console.log(res);
