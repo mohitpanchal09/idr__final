@@ -50,7 +50,7 @@ function Products() {
   useEffect(()=>{
     const getProducts = async()=>{
       try{
-        const res = await axios.get( `http://localhost:5000/products`)
+        const res = await axios.get( process.env.PORT +'/products')
         
         setProducts(res.data);
         console.log(res);
