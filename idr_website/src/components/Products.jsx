@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { popularDrones } from '../data';
+require('dotenv').config()
 import Product from './Product';
 import { mobile8 } from '../responsive';
 import { mobile4 } from '../responsive';
