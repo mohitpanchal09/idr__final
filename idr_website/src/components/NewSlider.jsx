@@ -12,7 +12,7 @@ margin-left:auto;
 margin-right:auto;
 width: 50%;
   height: 500px;
-  ${mobile({width:"80%"})}
+  ${mobile({width:"100%"})}
   ${mobile8({height:"300px"})}
   
   
