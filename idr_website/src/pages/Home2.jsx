@@ -38,7 +38,7 @@ const Home2 = () => {
         <Services />
         <Tape2 />
         <Industries />
-//         <Mentors/>
+
         <NewSliders/>
         <Newsletter />
         <Footer />
