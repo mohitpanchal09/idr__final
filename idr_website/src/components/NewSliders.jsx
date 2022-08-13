@@ -10,6 +10,7 @@ import { mobile8 } from '../responsive';
 import { mobile4 } from '../responsive';
 const Conatiner = styled.div`
 background-color:#1e1e1e;
+padding-bottom:50px;
 `
 const Image = styled.img`
 
