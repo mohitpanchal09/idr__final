@@ -90,7 +90,7 @@ const Slider = () => {
     useEffect(()=>{
       const getProducts = async()=>{
         try{
-          const res = await axios.get( `http://localhost:5000/api/products/find/`+id)
+          const res = await axios.get( `/api/products/find/`+id)
           
           setProducts(res.data);
           console.log(res);
