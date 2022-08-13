@@ -41,7 +41,7 @@ const NewSliders = () => {
     useEffect(()=>{
       const getProducts = async()=>{
         try{
-          const res = await axios.get( `${process.env.PORT}/images/`)
+          const res = await axios.get( `${process.env.PORT}/api/images/`)
           
           setProducts(res.data);
           console.log(res);
