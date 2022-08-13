@@ -41,7 +41,7 @@ const NewSliders = () => {
     useEffect(()=>{
       const getProducts = async()=>{
         try{
-          const res = await axios.get( `https://idrtest.herokuapp.com/api/images/`)
+          const res = await axios.get( `/api/images/`)
           
           setProducts(res.data);
           console.log(res);
