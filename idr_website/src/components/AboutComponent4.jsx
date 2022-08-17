@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { userData } from '../AboutData'
 import AbtFinal from './AbtFinal'
+import {mobile6} from '../responsive';
+import {mobile3} from '../responsive';
+
 
 const Container =styled.div`
 background-color:black;
