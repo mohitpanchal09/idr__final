@@ -73,3 +73,12 @@ export const mobile10 = (props)=>{
     }
     `;
 };
+
+
+export const mobile11 = (props)=>{
+    return css`
+    @media only screen and (max-width:370){
+        ${props}
+    }
+    `;
+};
