@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Popup from 'reactjs-popup';
-
-
+import { mobile6 } from '../responsive'
+import { mobile3 } from '../responsive'
+import { mobile11 } from '../responsive'
+import {mobile4} from '../responsive'
 const Container =styled.div`
 background-color:#262626;
 border-radius:15px;
@@ -15,6 +17,8 @@ flex-direction:column;
   transition: all 0.5s ease;
   transform: scale(1.1);
 }
+${mobile6({margin:"50px 15px",padding:"50px 20px"})}
+${mobile3({margin:"50px 7px",padding:"30px 2px"})}
 `
 const Left = styled.div`
 display:flex;
@@ -34,16 +38,26 @@ const Image = styled.img`
 width:80%;
 `
 const Profile =styled.div`
-padding-top:50px;
+padding-top:40px;
 `
 
 const Name =styled.p`
-font-size:22px;`
+font-size:22px;
+${mobile6({fontSize:"16px"})}
+${mobile3({fontSize:".6rem"})}
+${mobile11({fontSize:".85rem"})}
+
+`
 
 const Designation =styled.p`
 display:flex;
 justify-content:center;
-align-items:center;`
+align-items:center;
+${mobile6({fontSize:"14px"})}
+${mobile3({fontSize:".5rem"})}
+${mobile11({fontSize:"0.7rem"})}
+
+`
 
 
 const Button =styled.button`
@@ -55,6 +69,8 @@ border:0px;
 color:white;
 font-size:16px;
 background-color:#262626;
+${mobile6({fontSize:".5rem"})}
+${mobile11({fontSize:"0.7rem"})}
 `
 const NewBox = styled.div`
 background-color:rgba(0,0,0,0.8);
@@ -71,6 +87,7 @@ background-color: #262626;
 width:50%;
 height:70vh;
 margin-left:10%;
+${mobile6({height:"50vh", width:"60%"})}
 // position:fixed;
 `
 const Close =styled.button`
@@ -81,10 +98,11 @@ padding: 2px 5px;
 line-height: 20px;
 right: 21%;
 top: 16%;
+${mobile3({top:"25.3%",right:"17%",fontSize:"24px",height:"1.4rem"})}
 font-size: 24px;
 background: #ffffff;
 border-radius: 18px;
-border: 1px solid #cfcece;`
+border: 1x solid #cfcece;`
 const Box = styled.div`
 display:flex;
 flex-direction:column;`
@@ -96,7 +114,8 @@ margin-bottom:25px`
 const Img = styled.img`
 width:20%;
 padding:30px 0px;
-margin-left:8%;`
+margin-left:8%;
+${mobile6({width:"30%"})}`
 const Header = styled.h1`
 display:flex;
 flex-direction:column;
@@ -106,6 +125,9 @@ font-size: 28px;
 text-align: center;
 padding: 5px;
 color:white;
+
+${mobile6({fontSize:"15px" })}
+${mobile4({fontSize:"11px" })}
 `
 const Content = styled.p`
 width: 90%;
@@ -118,6 +140,8 @@ color:white;
 
 margin-left:4%;
 font-size:15px;
+${mobile6({fontSize:"12px",marginTop:"-12px"})}
+${mobile4({fontSize:"0.6rem"})}
 `
 const Actions = styled.div`
 width: 100%;
@@ -166,7 +190,7 @@ const AbtFinal = ({item}) => {
           {' '}
           {item.desc}
           <br />
-          
+          {/* {item.extra} */}
         </Content>
         {/* <Actions>
           <Popup
