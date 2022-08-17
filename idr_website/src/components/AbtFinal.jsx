@@ -140,7 +140,7 @@ color:white;
 
 margin-left:4%;
 font-size:15px;
-${mobile6({fontSize:"12px",marginTop:"-12px"})}
+${mobile6({fontSize:"12px",marginTop:"-22px"})}
 ${mobile4({fontSize:"0.6rem"})}
 `
 const Actions = styled.div`
