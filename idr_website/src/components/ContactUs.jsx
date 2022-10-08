@@ -135,6 +135,7 @@ const ContactUs = () => {
                 
            
             <Form ref={form} onSubmit={sendEmail}>
+              
                 <Image2 src='https://cdn.discordapp.com/attachments/891025496601661504/999908891246731274/unknown.png'/>
                 <Wrapper>
                 <Input type="text" placeholder='Full Name' name='user_name' required/>
@@ -142,6 +143,7 @@ const ContactUs = () => {
                 <Input2 type="text-area" placeholder='Message' name='user_message' required/>
                 <Button>SUBMIT</Button>
                 </Wrapper>
+              
             </Form>
             
         </Container>
